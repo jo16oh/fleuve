@@ -1,0 +1,47 @@
+{
+  "name": "fleuve",
+  "version": "0.0.0",
+  "description": "Run one value through a chain of steps, with retry, timeout and concurrency.",
+  "homepage": "https://github.com/jo16oh/fleuve#readme",
+  "bugs": {
+    "url": "https://github.com/jo16oh/fleuve/issues"
+  },
+  "license": "MIT",
+  "author": "Joichiro Hayashi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jo16oh/fleuve.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "vp run build",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "bumpp": "^12.3.0",
+    "typescript": "^7.0.2",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  }
+}
